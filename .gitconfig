@@ -3,11 +3,11 @@
 	email = alanrodriguezromero@gmail.com
 	signingkey = 3657BE603114B75F
 [alias]
-    co = checkout
-    br = branch
-    ci = commit
-    st = status
-    jalate = up
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	jalate = up
 [core]
 	editor = /usr/bin/vim
 [commit]
