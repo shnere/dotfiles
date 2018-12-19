@@ -69,4 +69,4 @@ set -g fish_pager_color_description 555 yellow
 set -g fish_pager_color_prefix cyan
 set -g fish_pager_color_progress cyan
 
-
+export GPG_TTY=(tty)
