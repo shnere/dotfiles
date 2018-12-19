@@ -17,7 +17,7 @@ alias v="vim"
 alias where=which
 alias brwe=brew
 
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+alias hosts='sudo $EDITOR /etc/hosts'
 
 alias ag='ag -W 200 -f --hidden'
 
@@ -41,7 +41,16 @@ alias fs="stat -f \"%z bytes\""
 alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-rdoc --no-ri'
 
+
 # Git Stuff
+
+# Return the current branch name
+# Usage example: git pull origin $(current_branch)
+#
+function current_branch
+  echo (git branch ^/dev/null | grep \* | sed 's/* //')
+end
+
 alias g=git
 alias ga='git add'
 alias gaa='git add --all'
@@ -75,18 +84,26 @@ alias gcs='git commit -S'
 alias gd='git diff'
 alias gdf='git diff --color | diff-so-fancy | less --tabs=4 -RFX'
 alias gdca='git diff --cached'
-alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 alias gfo='git fetch origin'
-alias gg='git gui citool'
-alias gga='git gui citool --amend'
-alias ggpull='git pull origin (git_current_branch)'
-alias ggpur=ggu
-alias ggpush='git push origin (git_current_branch)'
-alias ggsup='git branch --set-upstream-to=origin/(git_current_branch)'
+
+# these aliases take advantage of the previous function
+alias ggpull='git pull origin (current_branch)'
+#compdef ggpull=git
+alias ggpur='git pull --rebase origin (current_branch)'
+#compdef ggpur=git
+alias ggpush='git push origin (current_branch)'
+#compdef ggpush=git
+alias ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
+#compdef ggpnp=git
+alias ggsup='git branch --set-upstream-to=origin/(current_branch)'
+#compdef ggsup=git
+alias gpsup='git push --set-upstream origin (current_branch)'
+#compdef gpsup=git
+
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias gk='\gitk --all --branches'
