@@ -1,0 +1,39 @@
+{
+    "MASPreferences Frame Top Left" = "{421, 571}";
+    "MASPreferences Selected Identifier View" = AppBindingsPreferences;
+    "NSWindow Frame SUUpdateAlert" = "410 363 620 392 0 0 1440 877 ";
+    SUEnableAutomaticChecks = 1;
+    SUFeedURL = "https://updates.binaryage.com/totalspaces2-beta.xml";
+    SUHasLaunchedBefore = 1;
+    SUIncludePreReleases = 1;
+    SULastCheckTime = "2019-03-19 12:35:10 +0000";
+    TotalSpaces2LicenseKey = "";
+    TotalSpaces2LicenseName = "Alan Rodriguez Romero";
+    TotalSpacesFirstSeen = "2018-12-14 02:09:22 +0000";
+    bottomRightHotcorner = 1;
+    desktopBackgroundsMode = 1;
+    directionSwipingEnabled = 1;
+    disableNotificationAnimation = 0;
+    grids =     {
+        "023A822D-BA74-F1B5-97AD-3B592A47F3DB" =         {
+            gridColumns = 3;
+        };
+        "5A9E1AB6-5D53-2782-EF07-A851A77D1470" =         {
+            gridColumns = 2;
+        };
+        "C0216997-4024-5EF0-1AFF-5D1BFC827D9E" =         {
+            gridColumns = 3;
+        };
+        "D67A62C9-61FF-6F50-DE52-5D1CEB96BAAE" =         {
+            gridColumns = 3;
+        };
+    };
+    hasLaunchedBefore = 1;
+    moveWindowHotkeyFlags = 393216;
+    spaceChangeHotkeyFlags = 262144;
+    startAtLogin = 1;
+    topLeftHotcorner = 0;
+    topRightHotcorner = 1;
+    transitionEffect = Fade;
+    transitionSpeed = 110;
+}
