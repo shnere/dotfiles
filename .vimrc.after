@@ -4,3 +4,7 @@ color molokai
 set guifont=Menlo\ Regular:h14
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
