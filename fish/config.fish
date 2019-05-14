@@ -1,8 +1,5 @@
 set -g -x PATH /usr/local/bin $PATH
 source ~/.config/fish/aliases.fish
-set fisher_home ~/.local/share/fisherman
-set fisher_config ~/.config/fisherman
-source $fisher_home/config.fish
 
 # Completions
 function make_completion --argument-names alias command
@@ -49,6 +46,8 @@ set -g fish_color_separator 999
 set -g __fish_git_prompt_showdirtystate 'yes'
 set -g __fish_git_prompt_showupstream auto
 
+# Set Vi Mode
+set fish_key_bindings fish_user_key_bindings
 
 # Status Chars
 #set __fish_git_prompt_char_dirtystate '*'
