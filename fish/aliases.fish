@@ -81,7 +81,7 @@ alias gco='git checkout'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias gcs='git commit -S'
-alias gd='git diff'
+alias gd="git diff -- ':!package-lock.json' ':!yarn.lock'"
 alias gdf='git diff --color | diff-so-fancy | less --tabs=4 -RFX'
 alias gdca='git diff --cached'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
