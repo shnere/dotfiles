@@ -97,6 +97,8 @@ alias ggpur='git pull --rebase origin (current_branch)'
 #compdef ggpur=git
 alias ggpush='git push origin (current_branch)'
 #compdef ggpush=git
+alias ggpushf='git push -f origin (current_branch)'
+#compdef ggpushf=git
 alias ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
 #compdef ggpnp=git
 alias ggsup='git branch --set-upstream-to=origin/(current_branch)'
