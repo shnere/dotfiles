@@ -48,7 +48,7 @@ alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo 
 # Usage example: git pull origin $(current_branch)
 #
 function current_branch
-  echo (git branch ^/dev/null | grep \* | sed 's/* //')
+  echo (git branch | grep \* | cut -d ' ' -f2)
 end
 
 alias g=git
