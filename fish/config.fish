@@ -1,4 +1,4 @@
-set -g -x PATH $HOME/bin /usr/local/bin $PATH
+set -g -x PATH $HOME/bin /usr/local/bin /opt/homebrew/bin $PATH
 source ~/.config/fish/aliases.fish
 
 # Configure Jump
