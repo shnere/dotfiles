@@ -1,0 +1,58 @@
+# Shell
+command = /opt/homebrew/bin/fish --login
+
+# Keep compatibility with tools/themes that expect common xterm behavior
+term = xterm-256color
+
+# Scrollback
+scrollback-limit = 20000
+
+# Font
+font-family = "FiraCode Nerd Font Mono"
+font-size = 13
+font-feature = liga
+font-thicken = true
+font-thicken-strength = 80
+adjust-cell-height = 1
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+cursor-color = #ff79c6
+cursor-text = #1e1f29
+
+# Window / spacing
+window-padding-x = 16
+window-padding-y = 14
+macos-titlebar-style = transparent
+window-colorspace = display-p3
+
+# Behavior
+copy-on-select = false
+macos-option-as-alt = true
+
+# Base colors
+background = #1e1f29
+foreground = #f2f2f0
+
+# Selection
+selection-background = #3b3f55
+selection-foreground = #f8f8f2
+
+# 16-color palette
+palette = 0=#1e1f29
+palette = 1=#ff5c57
+palette = 2=#5af78e
+palette = 3=#f3f99d
+palette = 4=#57c7ff
+palette = 5=#ff6ac1
+palette = 6=#9aedfe
+palette = 7=#f1f1f0
+palette = 8=#686868
+palette = 9=#ff5c57
+palette = 10=#5af78e
+palette = 11=#f3f99d
+palette = 12=#57c7ff
+palette = 13=#ff6ac1
+palette = 14=#9aedfe
+palette = 15=#ffffff
