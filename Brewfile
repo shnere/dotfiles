@@ -35,6 +35,7 @@ brew "yt-dlp"
 brew "zlib"
 
 cask "brave-browser"
+cask "font-fira-code-nerd-font"
 cask "chatgpt"
 cask "claude"
 cask "cursor"
