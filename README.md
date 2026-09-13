@@ -18,7 +18,6 @@ Then by hand:
 - Cursor: sign in and let Settings Sync restore extensions. No access? Fall back to
   `xargs -n1 cursor --install-extension < cursor/extensions.txt`.
 - GPG and SSH keys: import or generate, then update `signingkey` if new.
-- Fn key and Karabiner device rules are per keyboard. Re-check them.
 
 ## Machine-specific config
 

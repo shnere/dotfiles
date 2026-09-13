@@ -86,6 +86,11 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 14
 
+# Keychron K2 (VID 1452, PID 592): Globe/Fn key does nothing
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.1452-592-0 -array \
+  '{HIDKeyboardModifierMappingDst = 30064771072; HIDKeyboardModifierMappingSrc = 280379760050179;}' \
+  '{HIDKeyboardModifierMappingDst = 30064771072; HIDKeyboardModifierMappingSrc = 1095216660483;}'
+
 # Keyboard shortcuts. Caps Lock (Hyper) and Right Control live in Karabiner.
 # 64/65: Spotlight (⌘Space goes to Raycast). 60/61: input source switching
 # (frees ⌃Space). 52: toggle Dock hiding (⌘⌥D).
