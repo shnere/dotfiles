@@ -1,0 +1,18 @@
+tap "dopplerhq/doppler"
+tap "temporalio/brew"
+
+brew "doppler"
+brew "temporal"
+
+cask "1password"
+cask "docker"
+cask "figma"
+cask "gather"
+cask "microsoft-teams"
+cask "okta-verify"
+cask "popsql"
+cask "tuple"
+cask "twingate"
+cask "wispr-flow"
+cask "zulu@17"
+
