@@ -94,15 +94,22 @@ defaults -currentHost write -g com.apple.keyboard.modifiermapping.1452-592-0 -ar
 # Keyboard shortcuts. Caps Lock (Hyper) and Right Control live in Karabiner.
 # 64/65: Spotlight (⌘Space goes to Raycast). 60/61: input source switching
 # (frees ⌃Space). 52: toggle Dock hiding (⌘⌥D).
-disable_hotkey() {
+set_hotkey() { # set_hotkey <id> <enabled 0|1> <params>
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$1" \
-    "{ enabled = 0; value = { parameters = ($2); type = standard; }; }"
+    "{ enabled = $2; value = { parameters = ($3); type = standard; }; }"
 }
-disable_hotkey 52 "100, 2, 1572864"
-disable_hotkey 60 "32, 49, 262144"
-disable_hotkey 61 "32, 49, 786432"
-disable_hotkey 64 "32, 49, 1048576"
-disable_hotkey 65 "32, 49, 1572864"
+set_hotkey 52 0 "100, 2, 1572864"
+set_hotkey 60 0 "32, 49, 262144"
+set_hotkey 61 0 "32, 49, 786432"
+set_hotkey 64 0 "32, 49, 1048576"
+set_hotkey 65 0 "32, 49, 1572864"
+# 118-121: switch to Desktop 1-4 with Hyper+1..4 (mask 1966080 = ⌘⌥⌃⇧)
+set_hotkey 118 1 "49, 18, 1966080"
+set_hotkey 119 1 "50, 19, 1966080"
+set_hotkey 120 1 "51, 20, 1966080"
+set_hotkey 121 1 "52, 21, 1966080"
+# 27: move focus to next window with Hyper+C
+set_hotkey 27 1 "99, 8, 1966080"
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 ###############################################################################

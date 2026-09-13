@@ -17,6 +17,7 @@ Then by hand:
 - Raycast: Settings > Advanced > Import your `.rayconfig`.
 - Cursor: sign in and let Settings Sync restore extensions. No access? Fall back to
   `xargs -n1 cursor --install-extension < cursor/extensions.txt`.
+- Logi Options+: sign in, Settings > Backup > Restore.
 - GPG and SSH keys: import or generate, then update `signingkey` if new.
 
 ## Machine-specific config
