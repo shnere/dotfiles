@@ -1,1 +1,12 @@
 .DS_Store
+*.bak
+fish/fish_variables
+# fisher-managed, installed from fish/fish_plugins
+fish/completions/fisher.fish
+fish/completions/nvm.fish
+fish/conf.d/nvm.fish
+fish/functions/fisher.fish
+fish/functions/nvm.fish
+fish/functions/_nvm_*.fish
+karabiner/assets
+karabiner/automatic_backups

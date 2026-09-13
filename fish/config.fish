@@ -1,4 +1,5 @@
 set -g -x PATH $HOME/bin /usr/local/bin /opt/homebrew/bin $PATH
+
 source ~/.config/fish/aliases.fish
 
 # Configure Jump
@@ -73,5 +74,7 @@ set -g fish_pager_color_progress cyan
 
 export GPG_TTY=(tty)
 
-# Install Starship
 starship init fish | source
+
+# Machine-specific config (work paths, secrets). Lives outside the repo.
+test -f ~/.config/work.fish; and source ~/.config/work.fish

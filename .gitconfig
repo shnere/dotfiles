@@ -12,5 +12,15 @@
 	editor = /usr/bin/vim
 [commit]
 	gpgsign = true
+[tag]
+	gpgSign = true
 [gpg]
 	program = gpg
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+# Machine-specific overrides (work email/key). Not in the repo.
+[include]
+	path = ~/.gitconfig.local

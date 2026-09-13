@@ -22,8 +22,8 @@ cursor-color = #ff79c6
 cursor-text = #1e1f29
 
 # Window / spacing
-window-padding-x = 16
-window-padding-y = 14
+window-padding-x = 8
+window-padding-y = 6
 macos-titlebar-style = transparent
 window-colorspace = display-p3
 
@@ -56,3 +56,5 @@ palette = 12=#57c7ff
 palette = 13=#ff6ac1
 palette = 14=#9aedfe
 palette = 15=#ffffff
+
+macos-option-as-alt = false
