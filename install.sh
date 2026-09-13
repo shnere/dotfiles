@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage: ./install.sh [--work]
-# Symlinks configs into place, installs Homebrew packages and Cursor extensions.
+# Symlinks configs into place and installs Homebrew packages.
 # Run ./.macos separately for system defaults.
 set -e
 D="$(cd "$(dirname "$0")" && pwd)"
@@ -28,7 +28,5 @@ FISH="$(command -v fish)"
 grep -qx "$FISH" /etc/shells || echo "$FISH" | sudo tee -a /etc/shells
 [ "$SHELL" = "$FISH" ] || chsh -s "$FISH"
 fish -c 'type -q fisher; or curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; fisher update'
-
-command -v cursor >/dev/null && xargs -n1 cursor --install-extension < "$D/cursor/extensions.txt"
 
 echo "Done. Work-only shell config and secrets go in ~/.config/work.fish and ~/.gitconfig.local (outside the repo)."
