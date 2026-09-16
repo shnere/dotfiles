@@ -21,6 +21,7 @@ link cursor/settings.json    "$HOME/Library/Application Support/Cursor/User/sett
 link cursor/keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
 
 command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file="$D/Brewfile"
 [ "$1" = "--work" ] && brew bundle --file="$D/Brewfile.work"
 
