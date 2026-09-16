@@ -51,7 +51,6 @@ cask "raycast"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
-cask "zoom"
 
 npm "@openai/codex"
 npm "corepack"
