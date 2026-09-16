@@ -5,7 +5,7 @@ brew "doppler"
 brew "temporal"
 
 cask "1password"
-cask "docker"
+cask "docker-desktop"
 cask "figma"
 cask "gather"
 cask "microsoft-teams"
