@@ -5,6 +5,9 @@
 set -e
 D="$(cd "$(dirname "$0")" && pwd)"
 
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 link() { # link <path in repo> <target>
   if [ -e "$2" ] && [ ! -L "$2" ]; then mv "$2" "$2.bak"; fi
   mkdir -p "$(dirname "$2")"
