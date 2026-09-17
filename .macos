@@ -88,28 +88,29 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 14
 
 # Keychron K2 (VID 1452, PID 592): Globe/Fn key does nothing
 defaults -currentHost write -g com.apple.keyboard.modifiermapping.1452-592-0 -array \
-  '{HIDKeyboardModifierMappingDst = 30064771072; HIDKeyboardModifierMappingSrc = 280379760050179;}' \
-  '{HIDKeyboardModifierMappingDst = 30064771072; HIDKeyboardModifierMappingSrc = 1095216660483;}'
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771072</integer><key>HIDKeyboardModifierMappingSrc</key><integer>280379760050179</integer></dict>' \
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771072</integer><key>HIDKeyboardModifierMappingSrc</key><integer>1095216660483</integer></dict>'
 
 # Keyboard shortcuts. Caps Lock (Hyper) and Right Control live in Karabiner.
 # 64/65: Spotlight (⌘Space goes to Raycast). 60/61: input source switching
 # (frees ⌃Space). 52: toggle Dock hiding (⌘⌥D).
-set_hotkey() { # set_hotkey <id> <enabled 0|1> <params>
+set_hotkey() { # set_hotkey <id> <true|false> <ascii> <keycode> <modifier mask>
+  # XML form on purpose: the old-style {a = 1;} syntax stores strings, which macOS ignores here
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$1" \
-    "{ enabled = $2; value = { parameters = ($3); type = standard; }; }"
+    "<dict><key>enabled</key><$2/><key>value</key><dict><key>parameters</key><array><integer>$3</integer><integer>$4</integer><integer>$5</integer></array><key>type</key><string>standard</string></dict></dict>"
 }
-set_hotkey 52 0 "100, 2, 1572864"
-set_hotkey 60 0 "32, 49, 262144"
-set_hotkey 61 0 "32, 49, 786432"
-set_hotkey 64 0 "32, 49, 1048576"
-set_hotkey 65 0 "32, 49, 1572864"
+set_hotkey 52 false 100 2 1572864
+set_hotkey 60 false 32 49 262144
+set_hotkey 61 false 32 49 786432
+set_hotkey 64 false 32 49 1048576
+set_hotkey 65 false 32 49 1572864
 # 118-121: switch to Desktop 1-4 with Hyper+1..4 (mask 1966080 = ⌘⌥⌃⇧)
-set_hotkey 118 1 "49, 18, 1966080"
-set_hotkey 119 1 "50, 19, 1966080"
-set_hotkey 120 1 "51, 20, 1966080"
-set_hotkey 121 1 "52, 21, 1966080"
+set_hotkey 118 true 49 18 1966080
+set_hotkey 119 true 50 19 1966080
+set_hotkey 120 true 51 20 1966080
+set_hotkey 121 true 52 21 1966080
 # 27: move focus to next window with Hyper+C
-set_hotkey 27 1 "99, 8, 1966080"
+set_hotkey 27 true 99 8 1966080
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 ###############################################################################
