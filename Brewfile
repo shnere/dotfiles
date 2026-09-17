@@ -50,7 +50,3 @@ cask "raycast"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
-
-npm "@openai/codex"
-npm "corepack"
-npm "yarn"
